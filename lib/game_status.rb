@@ -53,8 +53,8 @@ def over?(board)
 end
 
 def winner(character)
-  if won?(board) != false
-    return position_taken(board,position_1)
+  if won?(board) == false && over?(board) == true
+    return 
   else
     return nil
   end
