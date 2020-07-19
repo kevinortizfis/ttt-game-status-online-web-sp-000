@@ -55,3 +55,4 @@ end
 def winner(character)
   if won?(board) != false
     return position_taken(board,position_1)
+  else return nil
