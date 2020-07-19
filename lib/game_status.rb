@@ -65,6 +65,8 @@ def winner(board)
           return winner
         end
       end
+    end
+  end
   if won?(board) != false
     token
   else
