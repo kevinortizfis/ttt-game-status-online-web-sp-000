@@ -58,3 +58,4 @@ def winner(character)
   else
     return nil
   end
+end
