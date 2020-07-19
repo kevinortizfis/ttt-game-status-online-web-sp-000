@@ -24,7 +24,7 @@ if board.all?(" ")
           position_3 = combination[2]
           combination.each do |position|
             if (board[position_1] == board[position_2] && board[position_2] == board[position_3]) && position_taken?(board,position_1)
-              return combination
+              return position_1
             end
           end
         end
@@ -54,7 +54,7 @@ end
 
 def winner(board)
   if won?(board) != false
-    won?(board).find("X")
+    won?(board)
   else
     return nil
   end
