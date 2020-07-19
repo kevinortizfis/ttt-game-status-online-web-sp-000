@@ -54,7 +54,7 @@ def over?(board)
 end
 
 def winner(board)
-  def token
+  def token(board)
     WIN_COMBINATIONS.each do |combination|
       position_1 = combination[0]
       position_2 = combination[1]
