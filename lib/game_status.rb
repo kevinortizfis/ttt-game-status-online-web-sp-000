@@ -17,17 +17,18 @@ WIN_COMBINATIONS =
 def won?(board)
 if board.all?(" ")
   false
-elsif !board.all?(" ")
-      WIN_COMBINATIONS.each do |combination|
-        position_1 = combination[0]
-        position_2 = combination[1]
-        position_3 = combination[2]
-        combination.each do |position|
-          if (board[position_1] == board[position_2] && board[position_2] == board[position_3]) && position_taken?(board,position_1)
-            return combination
+  elsif !board.all?(" ")
+        WIN_COMBINATIONS.each do |combination|
+          position_1 = combination[0]
+          position_2 = combination[1]
+          position_3 = combination[2]
+          combination.each do |position|
+            if (board[position_1] == board[position_2] && board[position_2] == board[position_3]) && position_taken?(board,position_1)
+              return combination
+            end
           end
         end
-      end
+    false
     end
   end
 
