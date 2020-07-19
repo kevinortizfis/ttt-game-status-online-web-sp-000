@@ -24,7 +24,7 @@ if board.all?(" ")
           position_3 = combination[2]
           combination.each do |position|
             if (board[position_1] == board[position_2] && board[position_2] == board[position_3]) && position_taken?(board,position_1)
-              return combination
+              combination
             end
           end
         end
