@@ -54,8 +54,19 @@ def over?(board)
 end
 
 def winner(board)
+  def token
+    WIN_COMBINATIONS.each do |combination|
+      position_1 = combination[0]
+      position_2 = combination[1]
+      position_3 = combination[2]
+      combination.each do |position|
+        if (board[position_1] == board[position_2] && board[position_2] == board[position_3]) && position_taken?(board,position_1)
+          winner = board[position_1]
+          return winner
+        end
+      end
   if won?(board) != false
-    won?(board)
+    token
   else
     return nil
   end
