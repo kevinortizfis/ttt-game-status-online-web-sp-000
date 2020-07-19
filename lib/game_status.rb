@@ -54,7 +54,7 @@ end
 
 def winner(character)
   if won?(board) == false && over?(board) == true
-    return 
+    return
   else
     return nil
   end
